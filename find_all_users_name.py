@@ -13,14 +13,14 @@ def find_all_users_name(data: dict)->list:
     b=[]
     for i in data["messages"] :
         a.append(i.get('actor',0))
-        b.append(i.get('from',0))
+        a.append(i.get('from',0))
     for k in a :
         if k!=0:
             if k not in b :
                 b.append(k) 
     return b
+
 d=read_data(("data/result.json"))
 print(find_all_users_name(d))
-
 
 
