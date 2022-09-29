@@ -12,10 +12,10 @@ def find_all_users_id(data: dict)->list:
     a = []
     b = []
     for i in data["messages"]:
-        a.append(i.get("from_id"))
+        a.append(i.get("from_id",0))
     
     for i in data["messages"]:
-        a.append(i.get("actor_id"))
+        a.append(i.get("actor_id",0))
     for k in a:
         if k!=0:
             if k not in b:
