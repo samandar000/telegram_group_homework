@@ -13,4 +13,4 @@ def read_data(file_path: str)->dict:
     data = f.read()
     data = json.loads(data)
     return data
-print(read_data("data/result.json"))
+# print(read_data("data/result.json"))
