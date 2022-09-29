@@ -14,7 +14,7 @@ def find_all_users_id(data: dict)->list:
     for i in data["messages"]:
         a.append(i.get("from_id",0))
     
-    for i in data["messages"]:
+    for k in data["messages"]:
         a.append(i.get("actor_id",0))
     for k in a:
         if k!=0:
