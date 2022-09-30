@@ -20,7 +20,7 @@ def find_all_users_id(data: dict)->list:
         if k!=0:
             if k not in b:
                 b.append(k)
-    return b
+    return b[:3]
+    
 d=read_data(("data/result.json"))
 
-print(find_all_users_id(d))
