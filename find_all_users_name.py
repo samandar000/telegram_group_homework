@@ -1,5 +1,6 @@
 from read_data import read_data
 
+
 def find_all_users_name(data: dict)->list:
     """
     This function will find all the users in the json file and return the list of users name.
@@ -9,19 +10,20 @@ def find_all_users_name(data: dict)->list:
     Returns:
         list: List containing all the users name.
     """
-    a=[]
-    b=[]
-    for i in data["messages"] :
-        a.append(i.get('actor',0))
-        a.append(i.get('from',0))
-    for k in a :
-        if k!=0:
-            if k not in b :
-                b.append(k) 
-    return b
+    x = data["messages"]
+    a = []
+    
+    for i in x :
+        if i.get("actor") and i.get("actor") not in a:
+            a.append(i["actor"])
+        
+        if i.get("from") and i.get("from") not in a:
+            a.append(i["from"])
+        
+        
+    return a
 
 d=read_data(("data/result.json"))
 
-print(find_all_users_name(d))
 
 
