@@ -14,7 +14,7 @@ def find_all_users_id(data: dict)->list:
     for i in data["messages"]:
         a.append(i.get("from_id",0))
     
-    for k in data["messages"]:
+    for j in data["messages"]:
         a.append(i.get("actor_id",0))
     for k in a:
         if k!=0:
@@ -23,4 +23,5 @@ def find_all_users_id(data: dict)->list:
     return b[:-3]
     
 d=read_data(("data/result.json"))
+print(find_all_users_id(d))
 
