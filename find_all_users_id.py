@@ -23,4 +23,4 @@ def find_all_users_id(data: dict)->list:
     return a
 
 d=read_data(("data/result.json"))
-print(find_all_users_id(d))
+
