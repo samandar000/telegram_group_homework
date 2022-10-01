@@ -21,8 +21,9 @@ def find_all_users_id(data: dict)->list:
             user_id = from_id
 
         if user_id not in users_id:
-            user_id.append(user_id)
-    return user_id, len(user_id)
+            users_id.append(user_id)
+    
+    return users_id
 data = read_data('data/result.json')
 
         
