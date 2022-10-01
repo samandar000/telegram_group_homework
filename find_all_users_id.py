@@ -23,7 +23,7 @@ def find_all_users_id(data: dict)->list:
         if i not in users_id:
             users_id.append(i)
     
-    return users_id
+    return len(users_id)
 data = read_data('data/result.json')
 print(find_all_users_id(data))
 
