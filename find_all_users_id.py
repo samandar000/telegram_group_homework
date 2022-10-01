@@ -14,14 +14,14 @@ def find_all_users_id(data: dict)->list:
     for m in messages:
         actor_id = m.get('actor_id',False)
         from_id = m.get('from_id',False)
-        user_id = 0
+        i = 0
         if actor_id:
-            user_id = actor_id
+            i = actor_id
         else:
-            user_id = from_id
+            i = from_id
 
-        if user_id not in users_id:
-            users_id.append(user_id)
+        if i not in users_id:
+            users_id.append(i)
     
     return users_id
 data = read_data('data/result.json')
