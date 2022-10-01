@@ -26,6 +26,7 @@ def find_user_message_count(data: dict, users_id: str)->dict:
         
         message_cout[users_id] += 1 
     return message_cout
+    
 data = read_data('data/result.json')
 users_id = find_all_users_id(data)
 print(find_user_message_count(data, users_id))
